@@ -1,0 +1,45 @@
+/* D:\React\meesho\meesho-clone\src\components\ProductCard.css */
+.product-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease-in-out;
+  background-color: #fff;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.product-image {
+  max-width: 100%;
+  height: 200px; /* Fixed height for consistency */
+  object-fit: contain; /* Ensures the whole image is visible */
+  margin-bottom: 10px;
+}
+
+.product-name {
+  font-size: 1.1em;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.product-price {
+  font-size: 1.2em;
+  color: #f43397; /* Meesho's primary color */
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.product-discount {
+  color: #28a745; /* Green for discount */
+  font-weight: 500;
+}

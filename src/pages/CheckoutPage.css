@@ -1,0 +1,91 @@
+/* src/pages/CheckoutPage.css */
+.checkout-page {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.checkout-page h2 {
+  text-align: center;
+  color: #f43397;
+  margin-bottom: 30px;
+}
+
+.checkout-sections .section {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 25px;
+  background-color: #fcfcfc;
+}
+
+.checkout-sections .section h3 {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 1.4em;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 10px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+  width: calc(100% - 20px); /* Adjusting for padding */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+.payment-options label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+.payment-options input {
+  margin-right: 10px;
+}
+
+.place-order-btn {
+  background-color: #28a745; /* Green for success/action */
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1.1em;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.place-order-btn:hover {
+  background-color: #218838;
+}
+
+.back-to-cart-link {
+  display: inline-block;
+  margin-left: 20px;
+  margin-top: 20px;
+  color: #f43397;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.back-to-cart-link:hover {
+  text-decoration: underline;
+}
