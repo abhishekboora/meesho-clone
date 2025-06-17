@@ -1,36 +1,42 @@
-// D:\React\meesho\meesho-clone\src\components\ProductCard.js
-import React, { useContext } from 'react'; // Import useContext
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { CartContext } from '../context/CartContext'; // Import CartContext
-import './ProductCard.css';
+import { CartContext } from '../context/CartContext';
 
 function ProductCard({ product }) {
-  // Access the addToCart function from the CartContext
   const { addToCart } = useContext(CartContext);
 
   if (!product) {
-    return null; // Or handle case where product prop is missing
+    return null;
   }
 
   const handleAddToCart = (e) => {
-    // Prevent the Link from navigating when the button is clicked
     e.preventDefault();
-    e.stopPropagation(); // Stop event propagation to parent elements (like the Link)
+    e.stopPropagation();
 
     addToCart(product);
-    alert(`${product.name} added to cart!`); // Simple feedback
+    alert(`${product.name} added to cart!`);
   };
 
   return (
-    <div className="product-card">
-      <Link to={`/product/${product.id}`}>
-        <img src={product.image} alt={product.name} className="product-image" />
-        <h3 className="product-name">{product.name}</h3>
-        <p className="product-price">₹{product.price}</p>
-        <p className="product-discount">{product.discount}% Off</p>
+    <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 p-5 flex flex-col justify-between h-full animate-pop-in">
+      <Link to={`/product/${product.id}`} className="block flex-grow">
+        <div className="w-full h-56 md:h-64 flex items-center justify-center mb-4 overflow-hidden rounded-lg">
+          <img
+            src={product.image}
+            alt={product.name}
+            className="max-w-full max-h-full object-contain rounded-lg"
+          />
+        </div>
+        <h3 className="text-lg font-semibold text-gray-800 mb-2 truncate-2-lines">
+          {product.name}
+        </h3>
+        <p className="text-2xl font-bold text-meesho-pink mb-1">₹{product.price}</p>
+        <p className="text-meesho-green font-medium text-sm mb-4">{product.discount}% Off</p>
       </Link>
-      {/* Add an "Add to Cart" button */}
-      <button className="add-to-cart-btn" onClick={handleAddToCart}>
+      <button
+        className="w-full bg-meesho-pink text-white py-3 px-4 rounded-lg font-semibold text-lg hover:bg-meesho-pink-dark transition-all duration-300 shadow-md hover:shadow-lg"
+        onClick={handleAddToCart}
+      >
         Add to Cart
       </button>
     </div>
